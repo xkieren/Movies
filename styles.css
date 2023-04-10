@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+h3 {
+    font-size: 28px;
+    margin-top: 24px;
+    text-align: center;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+.purple {
+    color: #dd1212;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 32px;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.links {
+    display: flex;
+}
+
+.link {
+    font-size: 22px;
+    font-weight: 5   00;
+    list-style: none;
+    margin: 0 30px;
+}
+
+.logo__wrapper {
+    height: 180px;
+}
+
+.logo__img {
+    height: 100%;
+}
+
+.nav__link__primary {
+    border-radius: 50px;
+    background-color: red;
+    color: white;
+    overflow: hidden;
+    padding: 8px 32px;
+    transition: all 300ms ease;
+}
+
+.nav__link__primary:hover{
+    background-color: rgb(62, 65, 63);
+}
+
+.search__bar {
+    width: 50%;
+    height: 70px;
+    border-radius: 20px;
+    border: 1px solid #0a1f44;
+    color: #0a1f44;
+    font-size: 20px;
+    padding-left: 24px;
+}
+
+.search__button {
+    width: 140px;
+    margin-left: 20px;
+    height: 70px;
+    background-color: red;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 300ms ease;
+    border: 1px solid white;
+}
+
+.search__button:hover{
+    background-color: rgb(62, 65, 63);
+    cursor: pointer;
+}
+
+.input__wrapper{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+}
+
+.fa-search{
+    font-size: 35px;
+    color: white;
+}
+
+.movie__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    animation: swipe--left 500ms 0.3s backwards ease-in;
+   
+}
+
+.movie__card{
+    width: calc(100%/3);
+    margin-top: 40px;
+    transition: all 300ms ease;
+    padding-left: 28px;
+    padding-top: 12px;
+}
+
+.movie__card:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.sub__container{
+    color: rgb(62, 65, 63);
+    animation: swipe--right 500ms 0.3s backwards ease-in;
+}
+
+@keyframes swipe--right{
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes swipe--left{
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+.movie__poster__wrapper{
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.link__hover-effect {
+    position: relative;
+
+    
+
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+    background-color: rgb(62, 65, 63);
+}
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.fa-spinner {
+    animation: spinner 750ms infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* small phones, tablets, large smart phones */
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 28px;
+    }
+
+    h2,h3 {
+        font-size: 24px;
+    }
+
+    a{
+        font-size: 20px;
+    }
+
+    .movie__card{
+        width: calc(100%/2);
+    }
+    .movie__list {
+        padding: 0 24px;
+    }
+}
+
+/* small phones */
+@media (max-width: 480px) {
+#find {
+    display: none;
+}
+
+a{
+    margin-left: 10px;
+}
+a:last-child {
+    margin: 0px;
+}
+
+}
+
